@@ -1,3 +1,12 @@
+import './pages/index.css';
+import Card from './js/Card.js';
+import CardList from './js/CardList.js';
+import FormValidator from './js/FormValidator.js';
+import Popup from './js/Popup.js';
+import UserInfo from './js/UserInfo.js';
+import Api from './js/Api.js';
+import ErrorNotification from './js/ErrorNotification.js';
+
 const addButton = document.querySelector('.user-info__button_add');
 const editButton = document.querySelector('.user-info__button_edit');
 const userNameElement = document.querySelector('.user-info__name');

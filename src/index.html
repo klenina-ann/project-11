@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body style="overflow-x: hidden;">
   <div class="root">
     <div class="error-notification">Не удалось загрузить карточки. Ошибка: 500</div>
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -26,26 +26,12 @@
     </div>
     <div class="places-list root__section">
 
-      <!-- Пример вёрстки карточки: -->
-
-    <!--   <div class="place-card">
-        <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
-          <button class="place-card__delete-icon"></button>
-        </div>
-        <div class="place-card__description">
-          <h3 class="place-card__name">Камчатка</h3>
-          <button class="place-card__like-icon"></button>
-        </div>
-      </div> -->
-
-      <!-- конец примера. -->
-
     </div>
     <div class="popup">
     </div>
     <script id="add-card-template" type="text/template">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="new">
             <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название"
@@ -60,7 +46,7 @@
     </script>
     <script id="edit-profile-template" type="text/template">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="profile" novalidate>
             <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя"
@@ -75,7 +61,7 @@
     </script>
     <script id="edit-avatar-template" type="text/template">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
         <h3 class="popup__title">Обновить аватар</h3>
         <form class="popup__form" name="avatar" novalidate>
             <input type="url" name="avatar" class="popup__input popup__input_type_link-url" placeholder="Ссылка на аватар"
@@ -87,18 +73,11 @@
     </script>
     <script id="place-template" type="text/template">
       <div class="popup__image-container">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg').default%>" alt="" class="popup__close">
         <img class="popup__image" src="">
       </div>
     </script>
   </div>
-  <script type="text/javascript" src="./js/Card.js"></script>
-  <script type="text/javascript" src="./js/CardList.js"></script>
-  <script type="text/javascript" src="./js/FormValidator.js"></script>
-  <script type="text/javascript" src="./js/Popup.js"></script>
-  <script type="text/javascript" src="./js/UserInfo.js"></script>
-  <script type="text/javascript" src="./js/Api.js"></script>
-  <script type="text/javascript" src="./js/ErrorNotification.js"></script>
-  <script type="text/javascript" src="./script.js"></script>
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>

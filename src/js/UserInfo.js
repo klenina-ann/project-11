@@ -1,8 +1,8 @@
-class UserInfo {
+export default class UserInfo {
   constructor(options) {
    Object.assign(this, options);
-   const name = userNameElement.innerText;
-   const job = userJobElement.innerText;
+   const name = this.userNameElement.innerText;
+   const job = this.userJobElement.innerText;
    this.setUserInfo(name, job);
   }
 
