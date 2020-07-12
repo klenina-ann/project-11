@@ -1,0 +1,13 @@
+@import url(./_visible/popup__error_visible.css);
+
+.popup__error {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #FF0000;
+  position: absolute;
+  display: none;
+}
+
+.popup__error:not(:last-of-type) {
+  margin-top: -20px;
+}
