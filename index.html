@@ -1,0 +1,37 @@
+<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Mesto</title><link rel="stylesheet" href="main.726f7835ca5d608d7bf0.css"></head><body style="overflow-x: hidden;"><div class="root"><div class="error-notification">Не удалось загрузить карточки. Ошибка: 500</div><header class="header root__section"><img src="./images/logo.svg" alt="mesto logo" class="logo"></header><div class="profile root__section"><div class="user-info"><div class="user-info__photo"><div class="user-info__photo-overlay"></div></div><div class="user-info__data"><h1 class="user-info__name">Jaques Causteau</h1><p class="user-info__job">Sailor, Researcher</p><button class="button button_edit user-info__button user-info__button_edit">Edit</button></div><button class="button user-info__button user-info__button_add">+</button></div></div><div class="places-list root__section"></div><div class="popup"></div><script id="add-card-template" type="text/template"><div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new">
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название"
+            pattern=".{2,30}" required>
+            <div class="popup__error"></div>
+            <input type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку"
+            required>
+            <div class="popup__error"></div>
+            <button type class="button popup__button">+</button>
+        </form>
+      </div></script><script id="edit-profile-template" type="text/template"><div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="profile" novalidate>
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Имя"
+            pattern=".{2,30}" required>
+            <div class="popup__error"></div>
+            <input type="text" name="job" class="popup__input popup__input_type_job" placeholder="О себе"
+            pattern=".{2,30}" required >
+            <div class="popup__error"></div>
+            <button type class="button popup__button popup__button_type_text">Сохранить</button>
+        </form>
+      </div></script><script id="edit-avatar-template" type="text/template"><div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <h3 class="popup__title">Обновить аватар</h3>
+        <form class="popup__form" name="avatar" novalidate>
+            <input type="url" name="avatar" class="popup__input popup__input_type_link-url" placeholder="Ссылка на аватар"
+            required>
+            <div class="popup__error"></div>
+            <button type class="button popup__button popup__button_type_text">Сохранить</button>
+        </form>
+      </div></script><script id="place-template" type="text/template"><div class="popup__image-container">
+        <img src="./images/close.svg" alt="" class="popup__close">
+        <img class="popup__image" src="">
+      </div></script></div><script src="main.7214bf02bf30451d1072.js"></script></body></html>
