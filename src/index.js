@@ -16,7 +16,7 @@ const popupContainer = document.querySelector('.popup');
 const placesList = document.querySelector('.places-list');
 
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort10',
+  baseUrl: NODE_ENV === 'production' ? 'https://praktikum.tk/cohort10' : 'http://praktikum.tk/cohort10',
   headers: {
     authorization: 'a2069ab8-980b-4f2c-8341-7534f07e2496',
     'Content-Type': 'application/json'
