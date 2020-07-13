@@ -1,4 +1,4 @@
-class ErrorNotification {
+export default class ErrorNotification {
   constructor(selector, activeClass) {
     this.activeClass = activeClass;
     this.element = document.querySelector(selector);

@@ -1,3 +1,12 @@
+import './pages/index.css';
+import Card from './js/Card.js';
+import CardList from './js/CardList.js';
+import FormValidator from './js/FormValidator.js';
+import Popup from './js/Popup.js';
+import UserInfo from './js/UserInfo.js';
+import Api from './js/Api.js';
+import ErrorNotification from './js/ErrorNotification.js';
+
 const addButton = document.querySelector('.user-info__button_add');
 const editButton = document.querySelector('.user-info__button_edit');
 const userNameElement = document.querySelector('.user-info__name');
@@ -7,7 +16,7 @@ const popupContainer = document.querySelector('.popup');
 const placesList = document.querySelector('.places-list');
 
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort10',
+  baseUrl: NODE_ENV === 'production' ? 'https://praktikum.tk/cohort10' : 'http://praktikum.tk/cohort10',
   headers: {
     authorization: 'a2069ab8-980b-4f2c-8341-7534f07e2496',
     'Content-Type': 'application/json'

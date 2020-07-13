@@ -1,4 +1,4 @@
-class Card {
+export default class Card {
   constructor(options) {
     Object.assign(this, options);
   }
